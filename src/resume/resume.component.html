@@ -1,0 +1,104 @@
+
+<h1 class="title">Himanshu Gola <br></h1>
+<h4>Angular developer</h4>
+
+
+<div class="card">
+    <div class="card-content">
+        <h2>Profile Summary</h2>
+        <p>Passionate Angular Developer with a background in sales and a strong analytical mindset. After a successful career as a Sales Manager, I transitioned into web development, gaining expertise in Angular, TypeScript, HTML, and front-end technologies. Seeking an opportunity to contribute my technical skills and problem-solving abilities to a forward-thinking development team.</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <h2>Work Experience</h2>
+        <p>Develop and maintain Angular website using best practices and design patterns. 
+            Collaborate with UX/UI designers to implement responsive and user-friendly interfaces. 
+            Write clean, modular, and testable code using TypeScript .
+            Integrate with APIs and third-party services using HTTP .
+            Optimize application performance and scalability using lazy loading, with routing techniques</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <h2>Education</h2>
+        <p>Bachelor of Technology from Dr. A. P. J. Abdul Kalam Technical University, Lucknow</p>
+        <p>2019 batch passout</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <h2>Skills</h2>
+        
+        <mat-chip-set aria-label="Skills">
+            <mat-chip>HTML5</mat-chip>
+            <mat-chip>Angular (Routing, Forms, Services)</mat-chip>
+            <mat-chip>Bootstrap, Angular Material</mat-chip>
+            <mat-chip>CSS3, SCSS</mat-chip>
+           
+          </mat-chip-set>
+    </div>
+</div>
+
+<div class="container" *ngIf="!isAuthenticated">
+    <h1 class="title">Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <label>
+        Username:
+        <input type="text" formControlName="username" required>
+      </label>
+      <label>
+        Password:
+        <input type="password" formControlName="password" required>
+      </label>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+
+  <div class="container" *ngIf="isAuthenticated">
+    <h1 class="title">Contact Form</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" required>
+      </label>
+      <label>
+        Email:
+        <input type="email" formControlName="email" required>
+      </label>
+      <label>
+        Message:
+        <textarea formControlName="message" required></textarea>
+      </label>
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+    <button (click)="onLogout()">Logout</button>
+  </div>
+
+
+
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h2>Contact Detail</h2>
+        <p>Email: results.himanshu&#64;gmail.com | LinkedIn: linkedin.com/in/yourname</p>
+    </div>
+</div>
+
+
+<footer>
+    <div>
+        <input type="button" value="Fetch My Dog Breed" (click)="fetchmydog()">
+    </div>
+</footer>
+
+
+
+
+
+
